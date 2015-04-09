@@ -8,16 +8,20 @@
  * Factory in the comp3024Assign4App.
  */
 angular.module('comp3024Assign4App')
-  .factory('DataFactory', function () {
+  .factory('DataFactory', function ($http) {
     // Service logic
     // ...
 
-    var meaningOfLife = 42;
+    var data;
 
     // Public API here
     return {
-      someMethod: function () {
-        return meaningOfLife;
+      getData: function () {
+        if(!data) {
+          data = $http.get('/data.json');
+        }
+
+        return data;
       }
     };
   });

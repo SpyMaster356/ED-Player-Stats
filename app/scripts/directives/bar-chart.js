@@ -9,45 +9,58 @@
  * # barChart
  */
  angular.module('comp3024Assign4App')
- .directive('barChart', function ($http) {
+ .directive('barChart', function ($http, DataFactory) {
   return {
     restrict: 'E',
-    link: function postLink(scope, element) {
-      $http.get('/data.json')
-        .success(function (response) {
-          var allData = response;
-          var ships = {};
-          var data = [];
+    link: function (scope, element) {
+      var init = function () {
+        DataFactory.getData()
+          .success(processData)
+          .error(function () {
+            console.log('an error occured');
+          });
+      };
 
-          for (var recordIndex = 0; recordIndex < allData.length; recordIndex++) {
-            var record = allData[recordIndex];
+      var processData = function (allData) {
+        var ships = countShips(allData);
+        var data = convertToSeries(ships);
+        render(element[0], data);
+      };
 
-            for (var shipNameIndex = 0; shipNameIndex < record.ships.length; shipNameIndex++) {
-              var shipName = record.ships[shipNameIndex];
+      var countShips = function (allData) {
+        var ships = {};
 
-              if (!ships[shipName]) {
-                ships[shipName] = 1;
-              } else {
-                ships[shipName]++;
-              }
+        for (var recordIndex = 0; recordIndex < allData.length; recordIndex++) {
+          var record = allData[recordIndex];
+
+          for (var index = 0; index < record.ships.length; index++) {
+            var ship = record.ships[index];
+
+            if (!ships[ship]) {
+              ships[ship] = 1;
+            } else {
+              ships[ship]++;
             }
           }
+        }
 
-          console.log(ships);
+        return ships;
+      };
 
-          for (var ship in ships) {
-            data.push({
-              label: ship,
-              value: ships[ship]
-            });
-          }
+      var convertToSeries = function (records) {
+        var data = [];
 
-          console.log(data);
+        for (var record in records) {
+          data.push({
+            label: record,
+            value: records[record]
+          });
+        }
 
-          scope.render(element[0], data);
-        });
+        return data;
+      };
 
-      scope.render = function (element, data) {
+      var render = function (element, data) {
         var width = 500,
           barHeight = 20;
 
@@ -74,6 +87,8 @@
           .attr('dy', '.35em')
           .text(function(d) { return d.label + ' (' + d.value + ')'; });
       };
+
+      init();
     }
   };
 });
