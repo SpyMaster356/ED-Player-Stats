@@ -48,8 +48,6 @@
         });
 
       scope.render = function (element, data) {
-        console.log('drawing chart...');
-
         var width = 500,
           barHeight = 20;
 
