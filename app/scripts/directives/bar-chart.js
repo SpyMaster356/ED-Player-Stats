@@ -12,6 +12,9 @@
  .directive('barChart', function ($http, DataFactory) {
   return {
     restrict: 'E',
+    scope: {
+      data: '='
+    },
     link: function (scope, element) {
       var init = function () {
         DataFactory.getData()
@@ -69,7 +72,8 @@
           .domain([0, d3.max(data, function(d) { return d.value; })]);
 
         var chart = d3.select(element)
-          .append('svg')            .attr('height', barHeight * data.length);
+          .append('svg')
+          .attr('height', barHeight * data.length);
 
         var bar =
           chart.selectAll('g')

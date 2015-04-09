@@ -2,8 +2,12 @@ bar-chart svg{
   width: 100%
 }
 
-bar-chart svg rect {
-  fill: steelblue;
+bar-chart svg g:nth-child(even) rect {
+  fill: #6B2E01;
+}
+
+bar-chart svg g:nth-child(odd) rect {
+  fill: #A8602E;
 }
 
 bar-chart svg text {
