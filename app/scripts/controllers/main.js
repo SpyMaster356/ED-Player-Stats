@@ -20,6 +20,9 @@ angular.module('comp3024Assign4App')
       var processShipData = function (allData) {
         var ships = countShips(allData);
         $scope.allShips = convertToSeries(ships);
+
+        var bountyShips = countRoleShips(allData, 'Bounty Hunter');
+        $scope.bountyShips = convertToSeries(bountyShips);
       };
 
       var countShips = function (allData) {
@@ -27,6 +30,30 @@ angular.module('comp3024Assign4App')
 
         for (var recordIndex = 0; recordIndex < allData.length; recordIndex++) {
           var record = allData[recordIndex];
+
+          for (var index = 0; index < record.ships.length; index++) {
+            var ship = record.ships[index];
+
+            if (!ships[ship]) {
+              ships[ship] = 1;
+            } else {
+              ships[ship]++;
+            }
+          }
+        }
+
+        return ships;
+      };
+
+      var countRoleShips = function (allData, role) {
+        var ships = {};
+
+        for (var recordIndex = 0; recordIndex < allData.length; recordIndex++) {
+          var record = allData[recordIndex];
+
+          if(record.roles.indexOf(role) === -1) {
+            continue;
+          }
 
           for (var index = 0; index < record.ships.length; index++) {
             var ship = record.ships[index];
