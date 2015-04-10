@@ -9,71 +9,38 @@
  * # barChart
  */
  angular.module('comp3024Assign4App')
- .directive('barChart', function ($http, DataFactory) {
+ .directive('barChart', function () {
   return {
     restrict: 'E',
     scope: {
       data: '='
     },
-    link: function (scope, element) {
+    link: function ($scope, element) {
+      var chart;
+
       var init = function () {
-        DataFactory.getData()
-          .success(processData)
-          .error(function () {
-            console.log('an error occured');
-          });
+        $scope.$watch('data', function (newData) {
+          render(newData);
+        });
+
+        chart = d3.select(element[0])
+          .append('svg');
       };
 
-      var processData = function (allData) {
-        var ships = countShips(allData);
-        var data = convertToSeries(ships);
-        render(element[0], data);
-      };
+      var render = function (data) {
 
-      var countShips = function (allData) {
-        var ships = {};
-
-        for (var recordIndex = 0; recordIndex < allData.length; recordIndex++) {
-          var record = allData[recordIndex];
-
-          for (var index = 0; index < record.ships.length; index++) {
-            var ship = record.ships[index];
-
-            if (!ships[ship]) {
-              ships[ship] = 1;
-            } else {
-              ships[ship]++;
-            }
-          }
-        }
-
-        return ships;
-      };
-
-      var convertToSeries = function (records) {
-        var data = [];
-
-        for (var record in records) {
-          data.push({
-            label: record,
-            value: records[record]
-          });
-        }
-
-        return data;
-      };
-
-      var render = function (element, data) {
         var width = 500,
           barHeight = 20;
+
+        chart.selectAll('*').remove();
+
+        if(!data) { return; }
 
         var x = d3.scale.linear()
           .range([0, width])
           .domain([0, d3.max(data, function(d) { return d.value; })]);
 
-        var chart = d3.select(element)
-          .append('svg')
-          .attr('height', barHeight * data.length);
+        chart.attr('height', barHeight * data.length);
 
         var bar =
           chart.selectAll('g')

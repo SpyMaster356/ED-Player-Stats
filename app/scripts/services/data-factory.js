@@ -17,7 +17,9 @@ angular.module('comp3024Assign4App')
     // Public API here
     return {
       getData: function () {
+        console.log('fetching data');
         if(!data) {
+          console.log('data not cached');
           data = $http.get('/data.json');
         }
 
