@@ -18,13 +18,14 @@ var
 
 var
   INPUT_FILE = 'input.tsv',
-  OUTPUT_FILE = 'output.json';
+  OUTPUT_FILE = '../app/data.json';
 
 var processData = function () {
   var csv   = fs.readFileSync(INPUT_FILE, {encoding: 'UTF-8'});
   var lines = csv.split('\n');
   var data  = [];
 
+  //loop through all records, ignoring the first and last lines
   for (var i = 1; i < lines.length - 1; i++) {
     var line = lines[i].split('\t');
 

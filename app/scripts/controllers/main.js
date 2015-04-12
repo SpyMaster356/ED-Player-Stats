@@ -30,9 +30,10 @@ angular.module('comp3024Assign4App')
 
         for (var recordIndex = 0; recordIndex < allData.length; recordIndex++) {
           var record = allData[recordIndex];
+          record.ships.others.push(record.ships.primary);
 
-          for (var index = 0; index < record.ships.length; index++) {
-            var ship = record.ships[index];
+          for (var index = 0; index < record.ships.others.length; index++) {
+            var ship = record.ships.others[index];
 
             if (!ships[ship]) {
               ships[ship] = 1;
@@ -51,12 +52,14 @@ angular.module('comp3024Assign4App')
         for (var recordIndex = 0; recordIndex < allData.length; recordIndex++) {
           var record = allData[recordIndex];
 
-          if(record.roles.indexOf(role) === -1) {
+          if(record.roles.primary !== role) {
             continue;
           }
 
-          for (var index = 0; index < record.ships.length; index++) {
-            var ship = record.ships[index];
+          record.ships.others.push(record.ships.primary);
+
+          for (var index = 0; index < record.ships.others.length; index++) {
+            var ship = record.ships.others[index];
 
             if (!ships[ship]) {
               ships[ship] = 1;
