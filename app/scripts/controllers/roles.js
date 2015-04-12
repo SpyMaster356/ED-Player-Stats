@@ -53,10 +53,14 @@ angular.module('comp3024Assign4App')
       sortSeriesByLabel(primaryRoles);
       $scope.primaryRoles = primaryRoles;
 
-      var otherRoles = countAllRoles(filteredData);
+      var secondaryRoles = countAllRoles(filteredData);
+      secondaryRoles = convertToSeries(secondaryRoles);
+      sortSeriesByLabel(secondaryRoles);
+      $scope.secondaryRoles = secondaryRoles;
+
+      var otherRoles = parseOtherRoles(filteredData);
       otherRoles = convertToSeries(otherRoles);
       sortSeriesByLabel(otherRoles);
-
       $scope.otherRoles = otherRoles;
     };
 
@@ -102,6 +106,33 @@ angular.module('comp3024Assign4App')
             role = 'Other';
           }
           else if ($scope.roleFilter === role) {
+            continue;
+          }
+
+          if (!roles[role]) {
+            roles[role] = 1;
+          } else {
+            roles[role]++;
+          }
+        }
+      }
+
+      return roles;
+    };
+
+    var parseOtherRoles = function (data) {
+      var roles = {};
+
+      for (var recordIndex = 0; recordIndex < data.length; recordIndex++) {
+        var record = data[recordIndex];
+
+        for (var index = 0; index < record.roles.all.length; index++) {
+          var role = record.roles.all[index];
+
+          if(role === '') {
+            continue;
+          }
+          else if (defaultRoles.indexOf(role) !== -1 ) {
             continue;
           }
 
