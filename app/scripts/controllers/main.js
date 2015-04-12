@@ -15,10 +15,12 @@ angular.module('comp3024Assign4App')
       $scope.roleFilter = 'All';
       $scope.gameModeFilter = 'All';
       $scope.ownedSinceFilter = 'All';
+      $scope.factionFilter = 'All';
 
       $scope.$watch('roleFilter',       function () { refreshData(); });
       $scope.$watch('gameModeFilter',   function () { refreshData(); });
       $scope.$watch('ownedSinceFilter', function () { refreshData(); });
+      $scope.$watch('factionFilter',    function () { refreshData(); });
 
       DataFactory.getData()
         .success(function (response) {
@@ -35,6 +37,7 @@ angular.module('comp3024Assign4App')
       filteredData = filterByPrimaryRole(filteredData, $scope.roleFilter);
       filteredData = filterByGameMode(filteredData, $scope.gameModeFilter);
       filteredData = filterByOwnedSince(filteredData, $scope.ownedSinceFilter);
+      filteredData = filterByFaction(filteredData, $scope.factionFilter);
 
       var primaryShips = countPrimaryShips(filteredData);
       primaryShips = convertToSeries(primaryShips);
@@ -88,6 +91,22 @@ angular.module('comp3024Assign4App')
           var item = data[index];
 
           if(ownedSince === 'All' || item.basic.ownedSince === ownedSince) {
+            filteredData.push(item);
+          }
+        }
+      }
+
+      return filteredData;
+    };
+
+    var filterByFaction = function (data, faction) {
+      var filteredData = [];
+
+      if(data) {
+        for (var index = 0; index < data.length; index++) {
+          var item = data[index];
+
+          if(faction === 'All' || item.factions.supported === faction) {
             filteredData.push(item);
           }
         }
