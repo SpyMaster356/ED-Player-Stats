@@ -6,6 +6,19 @@
   </div>
   <div class="panel-body">
     <div class="filter">
+      <label>Filter by primary role:</label><br/>
+      <div class="btn-group">
+        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'All'">All</label>
+        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Bounty Hunter'">Bounty Hunter</label>
+        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Trader'">Trader</label>
+        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Explorer'">Explorer</label>
+        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Miner'">Miner</label>
+        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Smuggler'">Smuggler</label>
+        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Pirate'">Pirate</label>
+      </div>
+    </div>
+
+    <div class="filter">
       <label>Filter by game mode:</label><br/>
       <div class="btn-group">
         <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'All'">All</label>

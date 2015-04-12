@@ -11,11 +11,22 @@ angular.module('comp3024Assign4App')
   .controller('RolesCtrl', function ($scope, DataFactory, dataFilter) {
     var allData;
 
+    var defaultRoles = [
+      'Bounty Hunter',
+      'Trader',
+      'Miner',
+      'Smuggler',
+      'Pirate',
+      'Explorer'
+    ];
+
     var init = function () {
+      $scope.roleFilter = 'All';
       $scope.gameModeFilter = 'All';
       $scope.ownedSinceFilter = 'All';
       $scope.factionFilter = 'All';
 
+      $scope.$watch('roleFilter',       function () { refreshData(); });
       $scope.$watch('gameModeFilter',   function () { refreshData(); });
       $scope.$watch('ownedSinceFilter', function () { refreshData(); });
       $scope.$watch('factionFilter',    function () { refreshData(); });
@@ -32,6 +43,7 @@ angular.module('comp3024Assign4App')
 
     var refreshData = function () {
       var filteredData = allData;
+      filteredData = dataFilter.filterByPrimaryRole(filteredData, $scope.roleFilter);
       filteredData = dataFilter.filterByGameMode(filteredData, $scope.gameModeFilter);
       filteredData = dataFilter.filterByOwnedSince(filteredData, $scope.ownedSinceFilter);
       filteredData = dataFilter.filterByFaction(filteredData, $scope.factionFilter);
@@ -58,16 +70,16 @@ angular.module('comp3024Assign4App')
       for (var recordIndex = 0; recordIndex < data.length; recordIndex++) {
         var record = angular.copy(data[recordIndex]);
 
-        var ship = record.roles.primary;
+        var role = record.roles.primary;
 
-        if(ship === '') {
+        if(role === '') {
           continue;
         }
 
-        if (!roles[ship]) {
-          roles[ship] = 1;
+        if (!roles[role]) {
+          roles[role] = 1;
         } else {
-          roles[ship]++;
+          roles[role]++;
         }
       }
 
@@ -81,16 +93,22 @@ angular.module('comp3024Assign4App')
         var record = data[recordIndex];
 
         for (var index = 0; index < record.roles.all.length; index++) {
-          var ship = record.roles.all[index];
+          var role = record.roles.all[index];
 
-          if(ship === '') {
+          if(role === '') {
+            continue;
+          }
+          else if (defaultRoles.indexOf(role) === -1 ) {
+            role = 'Other';
+          }
+          else if ($scope.roleFilter === role) {
             continue;
           }
 
-          if (!roles[ship]) {
-            roles[ship] = 1;
+          if (!roles[role]) {
+            roles[role] = 1;
           } else {
-            roles[ship]++;
+            roles[role]++;
           }
         }
       }
