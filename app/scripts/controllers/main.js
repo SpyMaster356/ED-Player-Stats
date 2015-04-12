@@ -14,14 +14,11 @@ angular.module('comp3024Assign4App')
     var init = function () {
       $scope.roleFilter = 'All';
       $scope.gameModeFilter = 'All';
+      $scope.ownedSinceFilter = 'All';
 
-      $scope.$watch('roleFilter', function () {
-        refreshData();
-      });
-
-      $scope.$watch('gameModeFilter', function () {
-        refreshData();
-      });
+      $scope.$watch('roleFilter',       function () { refreshData(); });
+      $scope.$watch('gameModeFilter',   function () { refreshData(); });
+      $scope.$watch('ownedSinceFilter', function () { refreshData(); });
 
       DataFactory.getData()
         .success(function (response) {
@@ -37,6 +34,7 @@ angular.module('comp3024Assign4App')
       var filteredData = allData;
       filteredData = filterByPrimaryRole(filteredData, $scope.roleFilter);
       filteredData = filterByGameMode(filteredData, $scope.gameModeFilter);
+      filteredData = filterByOwnedSince(filteredData, $scope.ownedSinceFilter);
 
       var primaryShips = countPrimaryShips(filteredData);
       primaryShips = convertToSeries(primaryShips);
@@ -74,6 +72,22 @@ angular.module('comp3024Assign4App')
           var item = data[index];
 
           if(gameMode === 'All' || item.basic.gameMode === gameMode) {
+            filteredData.push(item);
+          }
+        }
+      }
+
+      return filteredData;
+    };
+
+    var filterByOwnedSince = function (data, ownedSince) {
+      var filteredData = [];
+
+      if(data) {
+        for (var index = 0; index < data.length; index++) {
+          var item = data[index];
+
+          if(ownedSince === 'All' || item.basic.ownedSince === ownedSince) {
             filteredData.push(item);
           }
         }
@@ -151,7 +165,13 @@ angular.module('comp3024Assign4App')
         var textB = b.label.toUpperCase();
         return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
       });
-    }
+    };
+
+    var sortSeriesByValue = function (series) {
+      series.sort(function(a, b) {
+        return (a.value < b.value) ? -1 : (a.value > b.value) ? 1 : 0;
+      });
+    };
 
     init();
   });

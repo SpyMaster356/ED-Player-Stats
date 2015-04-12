@@ -6,7 +6,7 @@
   </div>
   <div class="panel-body">
     <div class="filter">
-      <label>Filter by primary role:</label>
+      <label>Filter by primary role:</label><br/>
       <div class="btn-group">
         <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'All'">All</label>
         <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Bounty Hunter'">Bounty Hunter</label>
@@ -19,12 +19,24 @@
     </div>
 
     <div class="filter">
-      <label>Filter by game mode:</label>
+      <label>Filter by game mode:</label><br/>
       <div class="btn-group">
         <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'All'">All</label>
         <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Open'">Open</label>
         <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Private'">Private</label>
         <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Solo'">Solo</label>
+      </div>
+    </div>
+
+    <div class="filter">
+      <label>Filter by when ED was bought:</label><br/>
+      <div class="btn-group">
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'All'">All</label>
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'alpha'">Alpha</label>
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'beta'">Beta</label>
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'gamma'">Gamma</label>
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'original release'">Orginal Release</label>
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'steam release'">Steam Release</label>
       </div>
     </div>
   </div>
