@@ -1,4 +1,5 @@
-bar-chart {
+bar-chart,
+.filter {
   margin-top: 10px;
   margin-bottom: 10px;
   display: block;
@@ -10,7 +11,7 @@ pie-chart {
   height: 400px;
 }
 
-.legend text{ 
+.legend text{
   fill: #C8C8C8;
 }
 

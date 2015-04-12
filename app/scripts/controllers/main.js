@@ -29,42 +29,41 @@ angular.module('comp3024Assign4App')
     };
 
     var refreshData = function () {
-      var allShips = countShips($scope.roleFilter);
-      allShips = convertToSeries(allShips);
-      allShips.sort(function(a, b) {
-        var textA = a.label.toUpperCase();
-        var textB = b.label.toUpperCase();
-        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-      });
+      var filteredData = allData;
+      filteredData = filterByPrimaryRole(filteredData, $scope.roleFilter);
 
-      $scope.allShips = allShips;
+      var otherShips = countOtherShips(filteredData);
+      otherShips = convertToSeries(otherShips);
+      sortSeriesByLabel(otherShips);
+      $scope.otherShips = otherShips;
 
-      var primaryShips = countPrimaryShips($scope.roleFilter);
+      var primaryShips = countPrimaryShips(filteredData);
       primaryShips = convertToSeries(primaryShips);
-      primaryShips.sort(function(a, b) {
-        var textA = a.label.toUpperCase();
-        var textB = b.label.toUpperCase();
-        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-      });
-
+      sortSeriesByLabel(primaryShips);
       $scope.primaryShips = primaryShips;
     };
 
-    var countShips = function (role) {
-      var ships = {};
+    var filterByPrimaryRole = function (data, role) {
+      var filteredData = [];
 
-      if(!allData) {
-        return;
+      if(data) {
+        for (var index = 0; index < data.length; index++) {
+          var item = data[index];
+
+          if(role === 'All' || item.roles.primary === role) {
+            filteredData.push(item);
+          }
+        }
       }
 
-      for (var recordIndex = 0; recordIndex < allData.length; recordIndex++) {
-        var record = angular.copy(allData[recordIndex]);
+      return filteredData;
+    };
 
-        if(role !== 'All' && record.roles.primary !== role) {
-          continue;
-        }
+    var countOtherShips = function (data) {
+      var ships = {};
 
-        record.ships.others.push(record.ships.primary);
+      for (var recordIndex = 0; recordIndex < data.length; recordIndex++) {
+        var record = data[recordIndex];
 
         for (var index = 0; index < record.ships.others.length; index++) {
           var ship = record.ships.others[index];
@@ -84,19 +83,15 @@ angular.module('comp3024Assign4App')
       return ships;
     };
 
-    var countPrimaryShips = function (role) {
+    var countPrimaryShips = function (data) {
       var ships = {};
 
-      if(!allData) {
+      if(!data) {
         return;
       }
 
-      for (var recordIndex = 0; recordIndex < allData.length; recordIndex++) {
-        var record = angular.copy(allData[recordIndex]);
-
-        if(role !== 'All' && record.roles.primary !== role) {
-          continue;
-        }
+      for (var recordIndex = 0; recordIndex < data.length; recordIndex++) {
+        var record = angular.copy(data[recordIndex]);
 
         var ship = record.ships.primary;
 
@@ -126,6 +121,14 @@ angular.module('comp3024Assign4App')
 
       return data;
     };
+
+    var sortSeriesByLabel = function (series) {
+      series.sort(function(a, b) {
+        var textA = a.label.toUpperCase();
+        var textB = b.label.toUpperCase();
+        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      });
+    }
 
     init();
   });
