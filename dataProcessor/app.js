@@ -58,6 +58,8 @@ var parseRoleData = function (record, line) {
   record.roles.all     = line[OTHER_ROLES_INDEX]  ? line[OTHER_ROLES_INDEX].split(', ') : [];
 
   addPrimaryToAll(record.roles.primary, record.roles.all);
+
+  processRoles(record.roles.all);
 };
 
 var parseShipData = function (record, line) {
@@ -80,6 +82,18 @@ var addPrimaryToAll = function (primary, all) {
     all.push(primary);
   }
 };
+
+var processRoles = function (roles) {
+  roles.map(function (currentValue, index, array) {
+    var words = currentValue.split(' ');
+
+    words = words.map(function (word) {
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    });
+
+    array[index] = words.join(' ');
+  });
+}
 
 processData();
 

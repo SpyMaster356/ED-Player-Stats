@@ -16,7 +16,7 @@
         "Miner",
         "Smuggler",
         "Pirate",
-        "explorer"
+        "Explorer"
       ]
     },
     "ships": {
@@ -397,7 +397,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "the stupid one who does the shitty works",
+        "The Stupid One Who Does The Shitty Works",
         "Bounty Hunter"
       ]
     },
@@ -539,7 +539,7 @@
         "Bounty Hunter",
         "Trader",
         "Explorer",
-        "System flipper"
+        "System Flipper"
       ]
     },
     "ships": {
@@ -747,7 +747,7 @@
       "all": [
         "Bounty Hunter",
         "Trader",
-        "Buckyball racer",
+        "Buckyball Racer",
         "Explorer"
       ]
     },
@@ -1466,7 +1466,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "explorer",
+        "Explorer",
         "Bounty Hunter"
       ]
     },
@@ -1994,7 +1994,7 @@
         "Trader",
         "Smuggler",
         "Pirate",
-        "Mission runner"
+        "Mission Runner"
       ]
     },
     "ships": {
@@ -2341,7 +2341,7 @@
       "all": [
         "Bounty Hunter",
         "Trader",
-        "Triple agent (with a preference to the Alliance) ",
+        "Triple Agent (with A Preference To The Alliance) ",
         "Explorer"
       ]
     },
@@ -3378,7 +3378,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "merc",
+        "Merc",
         "Bounty Hunter"
       ]
     },
@@ -3682,7 +3682,7 @@
     "roles": {
       "primary": "Trader",
       "all": [
-        "racer",
+        "Racer",
         "Trader"
       ]
     },
@@ -3797,7 +3797,7 @@
     "roles": {
       "primary": "Trader",
       "all": [
-        "racer",
+        "Racer",
         "Trader"
       ]
     },
@@ -3941,7 +3941,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Explorer",
-        "Rare trader escort. ",
+        "Rare Trader Escort. ",
         "Bounty Hunter"
       ]
     },
@@ -6781,7 +6781,7 @@
       "primary": "Pirate",
       "all": [
         "Bounty Hunter",
-        "General roleplaying",
+        "General Roleplaying",
         "Pirate"
       ]
     },
@@ -8740,8 +8740,8 @@
         "Miner",
         "Pirate",
         "Explorer",
-        "combat",
-        "system flipping",
+        "Combat",
+        "System Flipping",
         "Trader"
       ]
     },
@@ -8770,7 +8770,7 @@
       "all": [
         "Trader",
         "Explorer",
-        "Combat fighter",
+        "Combat Fighter",
         "Bounty Hunter"
       ]
     },
@@ -9109,7 +9109,7 @@
     "roles": {
       "primary": "Trader",
       "all": [
-        "Mercenary (war fighting)",
+        "Mercenary (war Fighting)",
         "Trader"
       ]
     },
@@ -10973,7 +10973,7 @@
         "Trader",
         "Smuggler",
         "Pirate",
-        "PvP"
+        "Pvp"
       ]
     },
     "ships": {
@@ -11033,7 +11033,7 @@
         "Trader",
         "Smuggler",
         "Explorer",
-        "Space bum"
+        "Space Bum"
       ]
     },
     "ships": {
@@ -11121,7 +11121,7 @@
         "Miner",
         "Smuggler",
         "Explorer",
-        "missions"
+        "Missions"
       ]
     },
     "ships": {
@@ -12346,7 +12346,7 @@
     "roles": {
       "primary": "Explorer",
       "all": [
-        "Space bum",
+        "Space Bum",
         "Explorer"
       ]
     },
@@ -12380,7 +12380,7 @@
         "Bounty Hunter",
         "Trader",
         "Explorer",
-        "Missions (reputation and rank)"
+        "Missions (reputation And Rank)"
       ]
     },
     "ships": {
@@ -12629,7 +12629,7 @@
         "Bounty Hunter",
         "Miner",
         "Explorer",
-        "Rep farming on the BB",
+        "Rep Farming On The Bb",
         "Trader"
       ]
     },
@@ -15334,7 +15334,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "Collecting combat bonds",
+        "Collecting Combat Bonds",
         "Bounty Hunter"
       ]
     },
@@ -17144,7 +17144,7 @@
       "all": [
         "Smuggler",
         "Explorer",
-        "mercenary",
+        "Mercenary",
         "Trader"
       ]
     },
@@ -18444,7 +18444,7 @@
       "all": [
         "Trader",
         "Explorer",
-        "Messing around",
+        "Messing Around",
         "Bounty Hunter"
       ]
     },
@@ -18478,7 +18478,7 @@
       "all": [
         "Trader",
         "Explorer",
-        "Mercenary (conflict zones)",
+        "Mercenary (conflict Zones)",
         "Bounty Hunter"
       ]
     },
@@ -18625,7 +18625,7 @@
         "Bounty Hunter",
         "Miner",
         "Explorer",
-        "mercenary",
+        "Mercenary",
         "Trader"
       ]
     },
@@ -18965,7 +18965,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Trader",
-        "Political Faction adjustment",
+        "Political Faction Adjustment",
         "Bounty Hunter"
       ]
     },
@@ -21174,7 +21174,7 @@
         "Trader",
         "Miner",
         "Explorer",
-        "Dick with Spaceship",
+        "Dick With Spaceship",
         "Bounty Hunter"
       ]
     },
@@ -21257,7 +21257,7 @@
         "Trader",
         "Smuggler",
         "Explorer",
-        "the Brazilian asking for credits outside of new player spawn",
+        "The Brazilian Asking For Credits Outside Of New Player Spawn",
         "Bounty Hunter"
       ]
     },
@@ -21553,7 +21553,7 @@
         "Trader",
         "Pirate",
         "Explorer",
-        "security"
+        "Security"
       ]
     },
     "ships": {
@@ -25176,7 +25176,7 @@
         "Trader",
         "Miner",
         "Explorer",
-        "racer",
+        "Racer",
         "Bounty Hunter"
       ]
     },
@@ -25617,7 +25617,7 @@
     "roles": {
       "primary": "Trader",
       "all": [
-        "missions",
+        "Missions",
         "Trader"
       ]
     },
@@ -26147,7 +26147,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Explorer",
-        "pizza delivery guy",
+        "Pizza Delivery Guy",
         "Bounty Hunter"
       ]
     },
@@ -26317,7 +26317,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Smuggler",
-        "Soon to be pirate",
+        "Soon To Be Pirate",
         "Bounty Hunter"
       ]
     },
@@ -26372,7 +26372,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Smuggler",
-        "Soon to be pirate",
+        "Soon To Be Pirate",
         "Bounty Hunter"
       ]
     },
@@ -28446,7 +28446,7 @@
       "primary": "Explorer",
       "all": [
         "Bounty Hunter",
-        "Mercenary/ war fighter",
+        "Mercenary/ War Fighter",
         "Explorer"
       ]
     },
@@ -28947,7 +28947,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Explorer",
-        "Mercenary (when possible in wars)",
+        "Mercenary (when Possible In Wars)",
         "Bounty Hunter"
       ]
     },
@@ -29702,8 +29702,8 @@
         "Bounty Hunter",
         "Trader",
         "Miner",
-        "mercenary",
-        "protection"
+        "Mercenary",
+        "Protection"
       ]
     },
     "ships": {
@@ -30254,7 +30254,7 @@
       "all": [
         "Bounty Hunter",
         "Trader",
-        "Photographer (Search EDSR on Reddit)",
+        "Photographer (search Edsr On Reddit)",
         "Explorer"
       ]
     },
@@ -30431,8 +30431,8 @@
         "Bounty Hunter",
         "Trader",
         "Miner",
-        "mercenary",
-        "protection"
+        "Mercenary",
+        "Protection"
       ]
     },
     "ships": {
@@ -32616,7 +32616,7 @@
       "primary": "Trader",
       "all": [
         "Bounty Hunter",
-        "Soldier/Merc Pilot",
+        "Soldier/merc Pilot",
         "Trader"
       ]
     },
@@ -33273,7 +33273,7 @@
       "all": [
         "Trader",
         "Miner",
-        "being a boss",
+        "Being A Boss",
         "Bounty Hunter"
       ]
     },
@@ -34593,7 +34593,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "not really sure",
+        "Not Really Sure",
         "Bounty Hunter"
       ]
     },
@@ -36221,7 +36221,7 @@
         "Bounty Hunter",
         "Trader",
         "Explorer",
-        "Missions for rep"
+        "Missions For Rep"
       ]
     },
     "ships": {
@@ -37190,7 +37190,7 @@
       "all": [
         "Bounty Hunter",
         "Explorer",
-        "Combat (conflict zones)",
+        "Combat (conflict Zones)",
         "Trader"
       ]
     },
@@ -37449,7 +37449,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "PVP Bounty Hunting",
+        "Pvp Bounty Hunting",
         "Bounty Hunter"
       ]
     },
@@ -38572,7 +38572,7 @@
     "roles": {
       "primary": "Explorer",
       "all": [
-        "galatic records keeper",
+        "Galatic Records Keeper",
         "Explorer"
       ]
     },
@@ -41510,7 +41510,7 @@
         "Bounty Hunter",
         "Trader",
         "Explorer",
-        "guardian"
+        "Guardian"
       ]
     },
     "ships": {
@@ -41597,7 +41597,7 @@
     "roles": {
       "primary": "Trader",
       "all": [
-        "Federation pilot",
+        "Federation Pilot",
         "Trader"
       ]
     },
@@ -42420,7 +42420,7 @@
         "Bounty Hunter",
         "Smuggler",
         "Explorer",
-        "Combat pilot",
+        "Combat Pilot",
         "Trader"
       ]
     },
@@ -42477,7 +42477,7 @@
         "Bounty Hunter",
         "Trader",
         "Mentor",
-        "we could say? I enjoy going back to starter areas looking for new players to help them learn."
+        "We Could Say? I Enjoy Going Back To Starter Areas Looking For New Players To Help Them Learn."
       ]
     },
     "ships": {
@@ -42584,7 +42584,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "Mercenary (Conflict Zones)",
+        "Mercenary (conflict Zones)",
         "Bounty Hunter"
       ]
     },
@@ -43932,7 +43932,7 @@
         "Miner",
         "Smuggler",
         "Explorer",
-        "Run missions",
+        "Run Missions",
         "Bounty Hunter"
       ]
     },
@@ -45097,7 +45097,7 @@
       "all": [
         "Pirate",
         "Explorer",
-        "mercenary",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -45182,7 +45182,7 @@
     "roles": {
       "primary": "Pirate",
       "all": [
-        "ur moms lover",
+        "Ur Moms Lover",
         "Pirate"
       ]
     },
@@ -47095,7 +47095,7 @@
         "Trader",
         "Smuggler",
         "Pirate",
-        "fuck with noobie cmdrs",
+        "Fuck With Noobie Cmdrs",
         "Bounty Hunter"
       ]
     },
@@ -47567,7 +47567,7 @@
         "Trader",
         "Smuggler",
         "Pirate",
-        "fuck with noobie cmdrs",
+        "Fuck With Noobie Cmdrs",
         "Bounty Hunter"
       ]
     },
@@ -48152,7 +48152,7 @@
         "Bounty Hunter",
         "Smuggler",
         "Explorer",
-        "Reverse pirate",
+        "Reverse Pirate",
         "Trader"
       ]
     },
@@ -48551,7 +48551,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Pirate",
-        "IRS agent",
+        "Irs Agent",
         "Bounty Hunter"
       ]
     },
@@ -48749,8 +48749,8 @@
         "Miner",
         "Smuggler",
         "Explorer",
-        "Pretty much everything",
-        "just trying to work up to better ships"
+        "Pretty Much Everything",
+        "Just Trying To Work Up To Better Ships"
       ]
     },
     "ships": {
@@ -49228,7 +49228,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "bond hunter",
+        "Bond Hunter",
         "Bounty Hunter"
       ]
     },
@@ -49260,7 +49260,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Bounty Hunter",
-        "dabbled in mining early on"
+        "Dabbled In Mining Early On"
       ]
     },
     "ships": {
@@ -49288,7 +49288,7 @@
         "Bounty Hunter",
         "Trader",
         "Miner",
-        "cosmic lounge lizard",
+        "Cosmic Lounge Lizard",
         "Explorer"
       ]
     },
@@ -49602,7 +49602,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "Combat zones",
+        "Combat Zones",
         "Bounty Hunter"
       ]
     },
@@ -49793,7 +49793,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "bond hunter",
+        "Bond Hunter",
         "Bounty Hunter"
       ]
     },
@@ -52047,7 +52047,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "Navy pilot",
+        "Navy Pilot",
         "Bounty Hunter"
       ]
     },
@@ -52298,7 +52298,7 @@
       "primary": "Trader",
       "all": [
         "Smuggler",
-        "a bit of everything except pirating",
+        "A Bit Of Everything Except Pirating",
         "Trader"
       ]
     },
@@ -52407,7 +52407,7 @@
       "primary": "Trader",
       "all": [
         "Smuggler",
-        "a bit of everything except pirating",
+        "A Bit Of Everything Except Pirating",
         "Trader"
       ]
     },
@@ -52435,7 +52435,7 @@
       "primary": "Trader",
       "all": [
         "Explorer",
-        "courier",
+        "Courier",
         "Trader"
       ]
     },
@@ -53862,7 +53862,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "combat",
+        "Combat",
         "Bounty Hunter"
       ]
     },
@@ -54322,7 +54322,7 @@
         "Miner",
         "Smuggler",
         "Pirate",
-        "community leader.",
+        "Community Leader.",
         "Trader"
       ]
     },
@@ -54353,7 +54353,7 @@
         "Smuggler",
         "Pirate",
         "Explorer",
-        "Warzones. Also creating in game 'missions' for newbs",
+        "Warzones. Also Creating In Game 'missions' For Newbs",
         "Bounty Hunter"
       ]
     },
@@ -54522,7 +54522,7 @@
         "Smuggler",
         "Pirate",
         "Explorer",
-        "Warzones. Also creating in game 'missions' for newbs",
+        "Warzones. Also Creating In Game 'missions' For Newbs",
         "Bounty Hunter"
       ]
     },
@@ -55132,7 +55132,7 @@
         "Smuggler",
         "Pirate",
         "Explorer",
-        "Mercenary (Conflict Zones)",
+        "Mercenary (conflict Zones)",
         "Bounty Hunter"
       ]
     },
@@ -57526,7 +57526,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "mercenary",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -58868,7 +58868,7 @@
         "Bounty Hunter",
         "Smuggler",
         "Explorer",
-        " er"
+        " Er"
       ]
     },
     "ships": {
@@ -59095,7 +59095,7 @@
         "Bounty Hunter",
         "Trader",
         "Explorer",
-        "Combat pilot"
+        "Combat Pilot"
       ]
     },
     "ships": {
@@ -60753,7 +60753,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Explorer",
-        "tourist",
+        "Tourist",
         "Bounty Hunter"
       ]
     },
@@ -61303,8 +61303,8 @@
       "primary": "Bounty Hunter",
       "all": [
         "Explorer",
-        "Bulletin board missions",
-        "ie Rebel Transmissions and Black Boxes",
+        "Bulletin Board Missions",
+        "Ie Rebel Transmissions And Black Boxes",
         "Bounty Hunter"
       ]
     },
@@ -62525,7 +62525,7 @@
     "roles": {
       "primary": "",
       "all": [
-        "Murder-Hobo",
+        "Murder-hobo",
         ""
       ]
     },
@@ -64058,7 +64058,7 @@
     "roles": {
       "primary": "Explorer",
       "all": [
-        "mission runner",
+        "Mission Runner",
         "Explorer"
       ]
     },
@@ -64113,7 +64113,7 @@
         "Bounty Hunter",
         "Miner",
         "Pirate",
-        "killer without mercy",
+        "Killer Without Mercy",
         "Trader"
       ]
     },
@@ -64270,7 +64270,7 @@
       "all": [
         "Trader",
         "Smuggler",
-        "Space wanker",
+        "Space Wanker",
         "Bounty Hunter"
       ]
     },
@@ -65220,7 +65220,7 @@
         "Bounty Hunter",
         "Trader",
         "Explorer",
-        "Mercenary in conflict zones"
+        "Mercenary In Conflict Zones"
       ]
     },
     "ships": {
@@ -68576,7 +68576,7 @@
         "Trader",
         "Smuggler",
         "Explorer",
-        "'Accidental' clumsy twat (deliberate ramming in stations) - just for my own  mild amusement",
+        "'accidental' Clumsy Twat (deliberate Ramming In Stations) - Just For My Own  Mild Amusement",
         "Bounty Hunter"
       ]
     },
@@ -68936,7 +68936,7 @@
         "Trader",
         "Smuggler",
         "Pirate",
-        "mad scruff"
+        "Mad Scruff"
       ]
     },
     "ships": {
@@ -69492,7 +69492,7 @@
         "Trader",
         "Miner",
         "Smuggler",
-        "System flipper",
+        "System Flipper",
         "Explorer"
       ]
     },
@@ -71582,7 +71582,7 @@
       "primary": "Trader",
       "all": [
         "Explorer",
-        "RES ",
+        "Res ",
         "Trader"
       ]
     },
@@ -71720,7 +71720,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Pirate",
-        "murderer",
+        "Murderer",
         "Bounty Hunter"
       ]
     },
@@ -72277,7 +72277,7 @@
       "all": [
         "Bounty Hunter",
         "Trader",
-        "would like to explore eventually"
+        "Would Like To Explore Eventually"
       ]
     },
     "ships": {
@@ -73456,7 +73456,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "protection services",
+        "Protection Services",
         "Bounty Hunter"
       ]
     },
@@ -73508,7 +73508,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "soldier",
+        "Soldier",
         "Bounty Hunter"
       ]
     },
@@ -74164,7 +74164,7 @@
       "all": [
         "Miner",
         "Explorer",
-        "mission partaker",
+        "Mission Partaker",
         "Bounty Hunter"
       ]
     },
@@ -74300,7 +74300,7 @@
       "all": [
         "Bounty Hunter",
         "Pirate",
-        "Scoundrel and ne'er dowell",
+        "Scoundrel And Ne'er Dowell",
         "Miner"
       ]
     },
@@ -76656,7 +76656,7 @@
       "all": [
         "Trader",
         "Explorer",
-        "Space activist.",
+        "Space Activist.",
         "Bounty Hunter"
       ]
     },
@@ -78009,7 +78009,7 @@
       "all": [
         "Miner",
         "Smuggler",
-        "Being a cunt",
+        "Being A Cunt",
         "Bounty Hunter"
       ]
     },
@@ -81093,7 +81093,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Smuggler",
-        "Slave trade cross different systems",
+        "Slave Trade Cross Different Systems",
         "Bounty Hunter"
       ]
     },
@@ -81179,7 +81179,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "Rare trader",
+        "Rare Trader",
         "Bounty Hunter"
       ]
     },
@@ -83671,7 +83671,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Trader",
-        "what ever is needed at the time.  r.e. community goals.",
+        "What Ever Is Needed At The Time.  R.e. Community Goals.",
         "Bounty Hunter"
       ]
     },
@@ -84113,7 +84113,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Trader",
-        "Federation pilot",
+        "Federation Pilot",
         "Bounty Hunter"
       ]
     },
@@ -84570,7 +84570,7 @@
         "Bounty Hunter",
         "Trader",
         "Explorer",
-        "general badass"
+        "General Badass"
       ]
     },
     "ships": {
@@ -84714,7 +84714,7 @@
       "primary": "Trader",
       "all": [
         "Bounty Hunter",
-        "RPKer",
+        "Rpker",
         "Trader"
       ]
     },
@@ -86913,7 +86913,7 @@
       "primary": "",
       "all": [
         "Clueless",
-        "broke noob with 0 combat ability",
+        "Broke Noob With 0 Combat Ability",
         ""
       ]
     },
@@ -89831,7 +89831,7 @@
         "Trader",
         "Miner",
         "Explorer",
-        "Community events"
+        "Community Events"
       ]
     },
     "ships": {
@@ -91198,7 +91198,7 @@
       "all": [
         "Trader",
         "Explorer",
-        "Newbie helper",
+        "Newbie Helper",
         "Bounty Hunter"
       ]
     },
@@ -92815,7 +92815,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Trader",
-        "mercenary",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -94730,7 +94730,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "soldier",
+        "Soldier",
         "Bounty Hunter"
       ]
     },
@@ -96861,7 +96861,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "mercenary",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -97340,7 +97340,7 @@
     "roles": {
       "primary": "Pirate",
       "all": [
-        "murderer",
+        "Murderer",
         "Pirate"
       ]
     },
@@ -97869,7 +97869,7 @@
       "all": [
         "Smuggler",
         "Pirate",
-        "Mercenary is my primary role.",
+        "Mercenary Is My Primary Role.",
         "Bounty Hunter"
       ]
     },
@@ -99250,7 +99250,7 @@
         "Trader",
         "Smuggler",
         "Explorer",
-        "Wing support",
+        "Wing Support",
         "Pirate"
       ]
     },
@@ -99911,7 +99911,7 @@
       "all": [
         "Bounty Hunter",
         "Explorer",
-        "system flipping"
+        "System Flipping"
       ]
     },
     "ships": {
@@ -100189,7 +100189,7 @@
       "all": [
         "Bounty Hunter",
         "Trader",
-        "mercanary",
+        "Mercanary",
         "Pirate"
       ]
     },
@@ -101268,7 +101268,7 @@
       "all": [
         "Trader",
         "Smuggler",
-        "joy riding",
+        "Joy Riding",
         "Bounty Hunter"
       ]
     },
@@ -101524,8 +101524,8 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "I'd like to explore",
-        "but it's taking forever to get the cash for it.",
+        "I'd Like To Explore",
+        "But It's Taking Forever To Get The Cash For It.",
         "Bounty Hunter"
       ]
     },
@@ -102779,7 +102779,7 @@
         "Trader",
         "Smuggler",
         "Explorer",
-        "Hoodrat Shit wit my Friends"
+        "Hoodrat Shit Wit My Friends"
       ]
     },
     "ships": {
@@ -104233,7 +104233,7 @@
         "Trader",
         "Miner",
         "Explorer",
-        "courrier"
+        "Courrier"
       ]
     },
     "ships": {
@@ -105977,7 +105977,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "escort for my trader friends while they haul cargo",
+        "Escort For My Trader Friends While They Haul Cargo",
         "Bounty Hunter"
       ]
     },
@@ -106388,7 +106388,7 @@
         "Trader",
         "Smuggler",
         "Pirate",
-        "I only pirate NPCs",
+        "I Only Pirate Npcs",
         "Bounty Hunter"
       ]
     },
@@ -107714,7 +107714,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "warzone",
+        "Warzone",
         "Bounty Hunter"
       ]
     },
@@ -107740,7 +107740,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "warzone",
+        "Warzone",
         "Bounty Hunter"
       ]
     },
@@ -108051,7 +108051,7 @@
         "Trader",
         "Miner",
         "Smuggler",
-        "missions to help minor factions",
+        "Missions To Help Minor Factions",
         "Explorer"
       ]
     },
@@ -108109,7 +108109,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "mercenary",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -108742,7 +108742,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Trader",
-        "Hunting down griefers",
+        "Hunting Down Griefers",
         "Bounty Hunter"
       ]
     },
@@ -109263,7 +109263,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Explorer",
-        "warzone pilot",
+        "Warzone Pilot",
         "Bounty Hunter"
       ]
     },
@@ -109290,7 +109290,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Bounty Hunter",
-        "bad ass"
+        "Bad Ass"
       ]
     },
     "ships": {
@@ -112683,7 +112683,7 @@
       "primary": "Trader",
       "all": [
         "Pirate",
-        "psycopath",
+        "Psycopath",
         "Trader"
       ]
     },
@@ -115400,7 +115400,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Explorer",
-        "warzone",
+        "Warzone",
         "Bounty Hunter"
       ]
     },
@@ -117456,7 +117456,7 @@
     "roles": {
       "primary": "Trader",
       "all": [
-        "derp",
+        "Derp",
         "Trader"
       ]
     },
@@ -117537,7 +117537,7 @@
       "all": [
         "Trader",
         "Smuggler",
-        "do gooder",
+        "Do Gooder",
         "Bounty Hunter"
       ]
     },
