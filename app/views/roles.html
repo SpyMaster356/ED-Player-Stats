@@ -1,0 +1,55 @@
+<h1>Roles</h1>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Filters
+  </div>
+  <div class="panel-body">
+    <div class="filter">
+      <label>Filter by game mode:</label><br/>
+      <div class="btn-group">
+        <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'All'">All</label>
+        <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Open'">Open</label>
+        <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Private'">Private</label>
+        <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Solo'">Solo</label>
+      </div>
+    </div>
+
+    <div class="filter">
+      <label>Filter by when ED was bought:</label><br/>
+      <div class="btn-group">
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'All'">All</label>
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'alpha'">Alpha</label>
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'beta'">Beta</label>
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'gamma'">Gamma</label>
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'original release'">Orginal Release</label>
+        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'steam release'">Steam Release</label>
+      </div>
+    </div>
+
+    <div class="filter">
+      <label>Filter by faction supported:</label><br/>
+      <div class="btn-group">
+        <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'All'">All</label>
+        <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'Federation'">Federation</label>
+        <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'Empire'">Empire</label>
+        <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'Alliance'">Alliance</label>
+        <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'None'">None</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Primary Role</h2>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <pie-chart data="primaryRoles"></pie-chart>
+  </div>
+</div>
+
+<h2>Secondary Roles</h2>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <bar-chart data="otherRoles"></bar-chart>
+  </div>
+</div>
