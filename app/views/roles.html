@@ -53,16 +53,20 @@
   </div>
 </div>
 
-<h2>Primary Role</h2>
-<div class="panel panel-default">
-  <div class="panel-body">
-    <pie-chart data="primaryRoles"></pie-chart>
+<div ng-show="roleFilter === 'All'">
+  <h2>Primary Role</h2>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <pie-chart data="primaryRoles"></pie-chart>
+    </div>
   </div>
 </div>
 
-<h2>Secondary Roles</h2>
-<div class="panel panel-default">
-  <div class="panel-body">
-    <bar-chart data="otherRoles"></bar-chart>
+<div ng-show="roleFilter !== 'All'">
+  <h2>{{roleFilter}} Secondary Roles</h2>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <bar-chart data="otherRoles"></bar-chart>
+    </div>
   </div>
 </div>
