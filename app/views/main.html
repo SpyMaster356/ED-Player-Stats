@@ -1,6 +1,18 @@
 <h1>Ships</h1>
-<h2>All Ships owned by all players</h2>
-<bar-chart data="allShips"></bar-chart>
 
-<h2>Ships owned by Bounty Hunters</h2>
-<bar-chart data="bountyShips"></bar-chart>
+<label>Filter by primary role:</label>
+<div class="btn-group">
+  <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'All'">All</label>
+  <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Bounty Hunter'">Bounty Hunter</label>
+  <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Trader'">Trader</label>
+  <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Explorer'">Explorer</label>
+  <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Miner'">Miner</label>
+  <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Smuggler'">Smuggler</label>
+  <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Pirate'">Pirate</label>
+</div>
+
+<h2>Primary Ships</h2>
+<bar-chart data="primaryShips"></bar-chart>
+
+<h2>All Ships owned</h2>
+<bar-chart data="allShips"></bar-chart>

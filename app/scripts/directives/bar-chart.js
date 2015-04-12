@@ -19,8 +19,8 @@
       var chart;
 
       var init = function () {
-        $scope.$watch('data', function (newData) {
-          render(newData);
+        $scope.$watch('data', function () {
+          render($scope.data);
         });
 
         chart = d3.select(element[0])
@@ -28,7 +28,6 @@
       };
 
       var render = function (data) {
-
         var width = 500,
           barHeight = 20;
 
