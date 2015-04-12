@@ -29,7 +29,8 @@
 
       var render = function (data) {
         var width = 500,
-          barHeight = 20;
+          barHeight = 20,
+          color = d3.scale.category20();
 
         chart.selectAll('*').remove();
 
@@ -44,8 +45,10 @@
         var bar =
           chart.selectAll('g')
             .data(data)
-          .enter().append('g')
-            .attr('transform', function(d, i) { return 'translate(0,' + i * barHeight + ')'; });
+          .enter()
+            .append('g')
+              .attr('fill', function(d, i) { return color(i); } )
+              .attr('transform', function(d, i) { return 'translate(0,' + i * barHeight + ')'; });
 
         bar.append('rect')
           .attr('width', function(d) { return x(d.value); })

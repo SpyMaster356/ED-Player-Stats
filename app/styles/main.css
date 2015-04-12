@@ -8,14 +8,6 @@ bar-chart svg{
   width: 100%
 }
 
-bar-chart svg g:nth-child(even) rect {
-  fill: #6B2E01;
-}
-
-bar-chart svg g:nth-child(odd) rect {
-  fill: #A8602E;
-}
-
 bar-chart svg text {
   fill: white;
   font: 10px sans-serif;
