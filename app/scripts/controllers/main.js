@@ -13,8 +13,13 @@ angular.module('comp3024Assign4App')
 
     var init = function () {
       $scope.roleFilter = 'All';
+      $scope.gameModeFilter = 'All';
 
       $scope.$watch('roleFilter', function () {
+        refreshData();
+      });
+
+      $scope.$watch('gameModeFilter', function () {
         refreshData();
       });
 
@@ -31,16 +36,18 @@ angular.module('comp3024Assign4App')
     var refreshData = function () {
       var filteredData = allData;
       filteredData = filterByPrimaryRole(filteredData, $scope.roleFilter);
-
-      var otherShips = countOtherShips(filteredData);
-      otherShips = convertToSeries(otherShips);
-      sortSeriesByLabel(otherShips);
-      $scope.otherShips = otherShips;
+      filteredData = filterByGameMode(filteredData, $scope.gameModeFilter);
 
       var primaryShips = countPrimaryShips(filteredData);
       primaryShips = convertToSeries(primaryShips);
       sortSeriesByLabel(primaryShips);
       $scope.primaryShips = primaryShips;
+
+      var otherShips = countOtherShips(filteredData);
+      otherShips = convertToSeries(otherShips);
+      sortSeriesByLabel(otherShips);
+
+      $scope.otherShips = otherShips;
     };
 
     var filterByPrimaryRole = function (data, role) {
@@ -59,28 +66,20 @@ angular.module('comp3024Assign4App')
       return filteredData;
     };
 
-    var countOtherShips = function (data) {
-      var ships = {};
+    var filterByGameMode = function (data, gameMode) {
+      var filteredData = [];
 
-      for (var recordIndex = 0; recordIndex < data.length; recordIndex++) {
-        var record = data[recordIndex];
+      if(data) {
+        for (var index = 0; index < data.length; index++) {
+          var item = data[index];
 
-        for (var index = 0; index < record.ships.others.length; index++) {
-          var ship = record.ships.others[index];
-
-          if(ship === '') {
-            continue;
-          }
-
-          if (!ships[ship]) {
-            ships[ship] = 1;
-          } else {
-            ships[ship]++;
+          if(gameMode === 'All' || item.basic.gameMode === gameMode) {
+            filteredData.push(item);
           }
         }
       }
 
-      return ships;
+      return filteredData;
     };
 
     var countPrimaryShips = function (data) {
@@ -103,6 +102,30 @@ angular.module('comp3024Assign4App')
           ships[ship] = 1;
         } else {
           ships[ship]++;
+        }
+      }
+
+      return ships;
+    };
+
+    var countOtherShips = function (data) {
+      var ships = {};
+
+      for (var recordIndex = 0; recordIndex < data.length; recordIndex++) {
+        var record = data[recordIndex];
+
+        for (var index = 0; index < record.ships.others.length; index++) {
+          var ship = record.ships.others[index];
+
+          if(ship === '') {
+            continue;
+          }
+
+          if (!ships[ship]) {
+            ships[ship] = 1;
+          } else {
+            ships[ship]++;
+          }
         }
       }
 
