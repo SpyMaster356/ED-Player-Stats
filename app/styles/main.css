@@ -4,8 +4,24 @@ bar-chart {
   display: block;
 }
 
-.legend {
-  text-color: white;
+pie-chart {
+  position: relative;
+  width: 800px;
+  height: 400px;
+}
+
+.legend text{ 
+  fill: #C8C8C8;
+}
+
+.chart-tooltip {
+  position: absolute;
+  top: -215px;
+  left: 95px;
+}
+
+.chart-tooltip .data-percent {
+  margin-right: 10px;
 }
 
 bar-chart svg{

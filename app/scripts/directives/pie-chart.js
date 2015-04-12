@@ -17,14 +17,29 @@
     },
     link: function ($scope, element) {
       var svg;
+      var chart;
+      var tooltip;
 
       var init = function () {
+        chart = d3.select(element[0]);
+        svg = chart.append('svg');
+
+        tooltip = chart
+          .append('div')
+          .attr('class', 'chart-tooltip');
+
+        tooltip.append('div')
+          .attr('class', 'data-label');
+
+        tooltip.append('span')
+          .attr('class', 'data-percent');
+
+        tooltip.append('span')
+          .attr('class', 'data-value');
+
         $scope.$watch('data', function () {
           render($scope.data);
         });
-
-        svg = d3.select(element[0])
-          .append('svg');
       };
 
       var render = function (data) {
@@ -58,7 +73,7 @@
           .value(function (d) { return d.value; })
           .sort(null);
 
-        chart.selectAll('path')
+        var path = chart.selectAll('path')
           .data(pie(data))
           .enter()
             .append('path')
@@ -74,7 +89,7 @@
                   var height = legendRectSize + legendSpacing;
                   var vert = i * height;
 
-                  return 'translate(' + 450 + ',' + vert + ')';
+                  return 'translate(' + 460 + ',' + vert + ')';
                 });
 
         legend.append('text')
@@ -93,6 +108,23 @@
           .attr('x', legendRectSize + legendSpacing)
           .attr('y', legendRectSize - legendSpacing)
           .text(function(d) { return d.label; });
+
+        legend.append('text')
+          .attr('x', 175)
+          .attr('y', legendRectSize - legendSpacing)
+          .attr('text-anchor', 'end')
+          .text(function(d) { return d.value; });
+
+        path.on('mouseover', function(d) {
+          tooltip.select('.data-label').html(d.data.label);
+          tooltip.select('.data-value').html(d.data.value);
+          tooltip.select('.data-percent').html(toPercent(d.data.value / total));
+          tooltip.style('display', 'block');
+        });
+
+        path.on('mouseout', function() {
+          tooltip.style('display', 'none');
+        });
       };
 
       init();
