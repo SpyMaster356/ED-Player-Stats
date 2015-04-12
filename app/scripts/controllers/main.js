@@ -43,7 +43,7 @@ angular.module('comp3024Assign4App')
       sortSeriesByLabel(primaryShips);
       $scope.primaryShips = primaryShips;
 
-      var otherShips = countOtherShips(filteredData);
+      var otherShips = countAllShips(filteredData);
       otherShips = convertToSeries(otherShips);
       sortSeriesByLabel(otherShips);
 
@@ -108,14 +108,14 @@ angular.module('comp3024Assign4App')
       return ships;
     };
 
-    var countOtherShips = function (data) {
+    var countAllShips = function (data) {
       var ships = {};
 
       for (var recordIndex = 0; recordIndex < data.length; recordIndex++) {
         var record = data[recordIndex];
 
-        for (var index = 0; index < record.ships.others.length; index++) {
-          var ship = record.ships.others[index];
+        for (var index = 0; index < record.ships.all.length; index++) {
+          var ship = record.ships.all[index];
 
           if(ship === '') {
             continue;

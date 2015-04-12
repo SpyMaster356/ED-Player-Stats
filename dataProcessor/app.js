@@ -55,17 +55,17 @@ var parseBasicData = function (record, line) {
 var parseRoleData = function (record, line) {
   record.roles = {};
   record.roles.primary = line[PRIMARY_ROLE_INDEX] ? line[PRIMARY_ROLE_INDEX]            : '';
-  record.roles.others  = line[OTHER_ROLES_INDEX]  ? line[OTHER_ROLES_INDEX].split(', ') : [];
+  record.roles.all     = line[OTHER_ROLES_INDEX]  ? line[OTHER_ROLES_INDEX].split(', ') : [];
 
-  removePrimaryFromOthers(record.roles.primary, record.roles.others);
+  addPrimaryToAll(record.roles.primary, record.roles.all);
 };
 
 var parseShipData = function (record, line) {
   record.ships = {};
   record.ships.primary = line[PRIMARY_SHIP_INDEX] ? line[PRIMARY_SHIP_INDEX]            : '';
-  record.ships.others  = line[OTHER_SHIPS_INDEX]  ? line[OTHER_SHIPS_INDEX].split(', ') : [];
+  record.ships.all     = line[OTHER_SHIPS_INDEX]  ? line[OTHER_SHIPS_INDEX].split(', ') : [];
 
-  removePrimaryFromOthers(record.ships.primary, record.ships.others);
+  addPrimaryToAll(record.ships.primary, record.ships.all);
 };
 
 var parseFactionData = function (record, line) {
@@ -73,11 +73,11 @@ var parseFactionData = function (record, line) {
   record.factions.supported = line[FACTION_INDEX] ? line[FACTION_INDEX] : '';
 };
 
-var removePrimaryFromOthers = function (primary, others) {
-  var indexOfPrimary = others.indexOf(primary);
+var addPrimaryToAll = function (primary, all) {
+  var indexOfPrimary = all.indexOf(primary);
 
-  if(indexOfPrimary !== -1) {
-    others.splice(indexOfPrimary, 1);
+  if(indexOfPrimary === -1) {
+    all.push(primary);
   }
 };
 
