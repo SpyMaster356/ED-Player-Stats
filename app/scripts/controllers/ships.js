@@ -8,7 +8,7 @@
  * Controller of the comp3024Assign4App
  */
 angular.module('comp3024Assign4App')
-  .controller('MainCtrl', function ($scope, DataFactory) {
+  .controller('ShipsCtrl', function ($scope, DataFactory, dataFilter) {
     var allData;
 
     var init = function () {
@@ -34,10 +34,10 @@ angular.module('comp3024Assign4App')
 
     var refreshData = function () {
       var filteredData = allData;
-      filteredData = filterByPrimaryRole(filteredData, $scope.roleFilter);
-      filteredData = filterByGameMode(filteredData, $scope.gameModeFilter);
-      filteredData = filterByOwnedSince(filteredData, $scope.ownedSinceFilter);
-      filteredData = filterByFaction(filteredData, $scope.factionFilter);
+      filteredData = dataFilter.filterByPrimaryRole(filteredData, $scope.roleFilter);
+      filteredData = dataFilter.filterByGameMode(filteredData, $scope.gameModeFilter);
+      filteredData = dataFilter.filterByOwnedSince(filteredData, $scope.ownedSinceFilter);
+      filteredData = dataFilter.filterByFaction(filteredData, $scope.factionFilter);
 
       var primaryShips = countPrimaryShips(filteredData);
       primaryShips = convertToSeries(primaryShips);
@@ -51,69 +51,7 @@ angular.module('comp3024Assign4App')
       $scope.otherShips = otherShips;
     };
 
-    var filterByPrimaryRole = function (data, role) {
-      var filteredData = [];
 
-      if(data) {
-        for (var index = 0; index < data.length; index++) {
-          var item = data[index];
-
-          if(role === 'All' || item.roles.primary === role) {
-            filteredData.push(item);
-          }
-        }
-      }
-
-      return filteredData;
-    };
-
-    var filterByGameMode = function (data, gameMode) {
-      var filteredData = [];
-
-      if(data) {
-        for (var index = 0; index < data.length; index++) {
-          var item = data[index];
-
-          if(gameMode === 'All' || item.basic.gameMode === gameMode) {
-            filteredData.push(item);
-          }
-        }
-      }
-
-      return filteredData;
-    };
-
-    var filterByOwnedSince = function (data, ownedSince) {
-      var filteredData = [];
-
-      if(data) {
-        for (var index = 0; index < data.length; index++) {
-          var item = data[index];
-
-          if(ownedSince === 'All' || item.basic.ownedSince === ownedSince) {
-            filteredData.push(item);
-          }
-        }
-      }
-
-      return filteredData;
-    };
-
-    var filterByFaction = function (data, faction) {
-      var filteredData = [];
-
-      if(data) {
-        for (var index = 0; index < data.length; index++) {
-          var item = data[index];
-
-          if(faction === 'All' || item.factions.supported === faction) {
-            filteredData.push(item);
-          }
-        }
-      }
-
-      return filteredData;
-    };
 
     var countPrimaryShips = function (data) {
       var ships = {};
