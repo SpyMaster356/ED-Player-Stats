@@ -16,8 +16,12 @@ var
   OTHER_SHIPS_INDEX  = 7,
   FACTION_INDEX      = 9;
 
+var
+  INPUT_FILE = 'input.tsv',
+  OUTPUT_FILE = 'output.json';
+
 var processData = function () {
-  var csv   = fs.readFileSync('input.tsv', {encoding: 'UTF-8'});
+  var csv   = fs.readFileSync(INPUT_FILE, {encoding: 'UTF-8'});
   var lines = csv.split('\n');
   var data  = [];
 
@@ -36,7 +40,7 @@ var processData = function () {
     data.push(record);
   }
 
-  fs.writeFileSync('output.json', JSON.stringify(data, null, 2), {encoding: 'UTF-8'} );
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(data, null, 2), {encoding: 'UTF-8'} );
 };
 
 var parseBasicData = function (record, line) {
@@ -71,7 +75,7 @@ var parseFactionData = function (record, line) {
 var removePrimaryFromOthers = function (primary, others) {
   var indexOfPrimary = others.indexOf(primary);
 
-  if(indexOfPrimary != -1) {
+  if(indexOfPrimary !== -1) {
     others.splice(indexOfPrimary, 1);
   }
 };
