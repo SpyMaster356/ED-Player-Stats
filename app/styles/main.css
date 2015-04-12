@@ -4,6 +4,10 @@ bar-chart {
   display: block;
 }
 
+.legend {
+  text-color: white;
+}
+
 bar-chart svg{
   width: 100%
 }
