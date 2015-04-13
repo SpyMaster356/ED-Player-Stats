@@ -72,6 +72,22 @@ angular.module('comp3024Assign4App')
         }
 
         return filteredData;
+      },
+
+      filterByGender: function (data, gender) {
+        var filteredData = [];
+
+        if(data) {
+          for (var index = 0; index < data.length; index++) {
+            var item = data[index];
+
+            if(gender === 'All' || item.basic.gender === gender) {
+              filteredData.push(item);
+            }
+          }
+        }
+
+        return filteredData;
       }
     };
   });

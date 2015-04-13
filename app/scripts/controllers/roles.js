@@ -25,11 +25,13 @@ angular.module('comp3024Assign4App')
       $scope.gameModeFilter = 'All';
       $scope.ownedSinceFilter = 'All';
       $scope.factionFilter = 'All';
+      $scope.genderFilter = 'All';
 
       $scope.$watch('roleFilter',       function () { refreshData(); });
       $scope.$watch('gameModeFilter',   function () { refreshData(); });
       $scope.$watch('ownedSinceFilter', function () { refreshData(); });
       $scope.$watch('factionFilter',    function () { refreshData(); });
+      $scope.$watch('genderFilter',    function () { refreshData(); });
 
       DataFactory.getData()
         .success(function (response) {
@@ -47,6 +49,7 @@ angular.module('comp3024Assign4App')
       filteredData = dataFilter.filterByGameMode(filteredData, $scope.gameModeFilter);
       filteredData = dataFilter.filterByOwnedSince(filteredData, $scope.ownedSinceFilter);
       filteredData = dataFilter.filterByFaction(filteredData, $scope.factionFilter);
+      filteredData = dataFilter.filterByGender(filteredData, $scope.genderFilter);
 
       var primaryRoles = countPrimaryRoles(filteredData);
       primaryRoles = convertToSeries(primaryRoles);
