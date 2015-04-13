@@ -31,9 +31,15 @@ angular.module('comp3024Assign4App')
         });
       },
 
-      sortSeriesByValue: function (series) {
+      sortSeriesByValue: function (series, desc) {
         series.sort(function(a, b) {
-          return (a.value < b.value) ? -1 : (a.value > b.value) ? 1 : 0;
+          var sortValue = (a.value < b.value) ? -1 : (a.value > b.value) ? 1 : 0;
+
+          if(desc) {
+            sortValue *= -1;
+          }
+
+          return sortValue;
         });
       }
     };
