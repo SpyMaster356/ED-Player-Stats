@@ -2622,7 +2622,7 @@
         "Bounty Hunter",
         "Smuggler",
         "Explorer",
-        "Escort",
+        "Protector",
         "Trader"
       ]
     },
@@ -3941,7 +3941,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Explorer",
-        "Rare Trader Escort. ",
+        "Protector",
         "Bounty Hunter"
       ]
     },
@@ -4451,7 +4451,7 @@
       "all": [
         "Trader",
         "Explorer",
-        "Mercenary ",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -9109,7 +9109,7 @@
     "roles": {
       "primary": "Trader",
       "all": [
-        "Mercenary (war Fighting)",
+        "Mercenary",
         "Trader"
       ]
     },
@@ -18478,7 +18478,7 @@
       "all": [
         "Trader",
         "Explorer",
-        "Mercenary (conflict Zones)",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -22429,7 +22429,7 @@
       "all": [
         "Trader",
         "Explorer",
-        "Mercenary ",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -28446,7 +28446,7 @@
       "primary": "Explorer",
       "all": [
         "Bounty Hunter",
-        "Mercenary/ War Fighter",
+        "Mercenary",
         "Explorer"
       ]
     },
@@ -28532,7 +28532,7 @@
     "roles": {
       "primary": "Trader",
       "all": [
-        "Escort ",
+        "Protector",
         "Trader"
       ]
     },
@@ -28947,7 +28947,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Explorer",
-        "Mercenary (when Possible In Wars)",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -42584,7 +42584,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "Mercenary (conflict Zones)",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -45694,7 +45694,7 @@
       "all": [
         "Bounty Hunter",
         "Trader",
-        "Mercenary "
+        "Mercenary"
       ]
     },
     "ships": {
@@ -45779,7 +45779,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Miner",
-        "Trade Escort",
+        "Protector",
         "Bounty Hunter"
       ]
     },
@@ -45951,7 +45951,7 @@
       "primary": "Bounty Hunter",
       "all": [
         "Miner",
-        "Trade Escort",
+        "Protector",
         "Bounty Hunter"
       ]
     },
@@ -46010,7 +46010,7 @@
         "Miner",
         "Smuggler",
         "Explorer",
-        "Mercenary ",
+        "Mercenary",
         "Trader"
       ]
     },
@@ -55132,7 +55132,7 @@
         "Smuggler",
         "Pirate",
         "Explorer",
-        "Mercenary (conflict Zones)",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -65220,7 +65220,7 @@
         "Bounty Hunter",
         "Trader",
         "Explorer",
-        "Mercenary In Conflict Zones"
+        "Mercenary"
       ]
     },
     "ships": {
@@ -73905,7 +73905,7 @@
       "all": [
         "Pirate",
         "Explorer",
-        "Mercenary?",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -81179,7 +81179,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "Rare Trader",
+        "Rares Trader",
         "Bounty Hunter"
       ]
     },
@@ -85113,7 +85113,7 @@
     "roles": {
       "primary": "Explorer",
       "all": [
-        "Mercenary (of Mikunn)",
+        "Mercenary",
         "Explorer"
       ]
     },
@@ -94786,7 +94786,7 @@
       "all": [
         "Trader",
         "Explorer",
-        "Rare Trader",
+        "Rares Trader",
         "Missions",
         "Bounty Hunter"
       ]
@@ -96406,7 +96406,7 @@
       "all": [
         "Trader",
         "Explorer",
-        "Escort",
+        "Protector",
         "Bounty Hunter"
       ]
     },
@@ -97869,7 +97869,7 @@
       "all": [
         "Smuggler",
         "Pirate",
-        "Mercenary Is My Primary Role.",
+        "Mercenary",
         "Bounty Hunter"
       ]
     },
@@ -98274,7 +98274,7 @@
         "Bounty Hunter",
         "Smuggler",
         "Explorer",
-        "Rares",
+        "Rares Trader",
         "Trader"
       ]
     },
@@ -105977,7 +105977,7 @@
     "roles": {
       "primary": "Bounty Hunter",
       "all": [
-        "Escort For My Trader Friends While They Haul Cargo",
+        "Protector",
         "Bounty Hunter"
       ]
     },

@@ -91,9 +91,21 @@ var processRoles = function (roles) {
       return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
     });
 
-    array[index] = words.join(' ');
+    var newValue = words.join(' ');
+
+    if(newValue.indexOf('Mercenary') !== -1 ) {
+      newValue = 'Mercenary';
+    }
+    else if(newValue.indexOf('Escort') !== -1 ) {
+      newValue = 'Protector';
+    }
+    else if(newValue.indexOf('Rare') !== -1 ) {
+      newValue = 'Rares Trader';
+    }
+
+    array[index] = newValue;
   });
-}
+};
 
 processData();
 

@@ -1,77 +1,81 @@
 <h1>Roles</h1>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    Filters
-  </div>
-  <div class="panel-body">
-    <div class="filter">
-      <label>Filter by primary role:</label><br/>
-      <div class="btn-group">
-        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'All'">All</label>
-        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Bounty Hunter'">Bounty Hunter</label>
-        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Trader'">Trader</label>
-        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Explorer'">Explorer</label>
-        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Miner'">Miner</label>
-        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Smuggler'">Smuggler</label>
-        <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Pirate'">Pirate</label>
-      </div>
-    </div>
-
-    <div class="filter">
-      <label>Filter by game mode:</label><br/>
-      <div class="btn-group">
-        <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'All'">All</label>
-        <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Open'">Open</label>
-        <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Private'">Private</label>
-        <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Solo'">Solo</label>
-      </div>
-    </div>
-
-    <div class="filter">
-      <label>Filter by when ED was bought:</label><br/>
-      <div class="btn-group">
-        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'All'">All</label>
-        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'alpha'">Alpha</label>
-        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'beta'">Beta</label>
-        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'gamma'">Gamma</label>
-        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'original release'">Orginal Release</label>
-        <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'steam release'">Steam Release</label>
-      </div>
-    </div>
-
-    <div class="filter">
-      <label>Filter by faction supported:</label><br/>
-      <div class="btn-group">
-        <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'All'">All</label>
-        <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'Federation'">Federation</label>
-        <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'Empire'">Empire</label>
-        <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'Alliance'">Alliance</label>
-        <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'None'">None</label>
+<div class="col-sm-9">
+  <div ng-show="roleFilter === 'All'">
+    <h2>Primary Role</h2>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <pie-chart data="primaryRoles"></pie-chart>
       </div>
     </div>
   </div>
-</div>
 
-<div ng-show="roleFilter === 'All'">
-  <h2>Primary Role</h2>
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <pie-chart data="primaryRoles"></pie-chart>
-    </div>
-  </div>
-</div>
-
-<div ng-show="roleFilter !== 'All'">
   <h2>{{roleFilter}} Secondary Roles</h2>
   <div class="panel panel-default">
     <div class="panel-body">
       <bar-chart data="secondaryRoles"></bar-chart>
     </div>
   </div>
+
+  <h3>{{roleFilter}} Other 'Roles'</h3>
+  <div class="row">
+    <div class="col-sm-4" ng-repeat="item in otherRoles">
+      {{item.label}} ({{item.value}})
+    </div>
+  </div>
 </div>
 
-<h3>Other 'Roles'</h3>
-<ul>
-  <li ng-repeat="item in otherRoles">{{item.label}} ({{item.value}})</li>
-</ul>
+<div class="col-sm-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Filters
+    </div>
+    <div class="panel-body">
+      <div class="filter">
+        <label>Filter by primary role:</label><br/>
+        <div class="btn-group">
+          <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'All'">All</label>
+          <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Bounty Hunter'">Bounty Hunter</label>
+          <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Trader'">Trader</label>
+          <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Explorer'">Explorer</label>
+          <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Miner'">Miner</label>
+          <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Smuggler'">Smuggler</label>
+          <label class="btn btn-primary" ng-model="roleFilter" btn-radio="'Pirate'">Pirate</label>
+        </div>
+      </div>
+
+      <div class="filter">
+        <label>Filter by game mode:</label><br/>
+        <div class="btn-group">
+          <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'All'">All</label>
+          <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Open'">Open</label>
+          <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Private'">Private</label>
+          <label class="btn btn-primary" ng-model="gameModeFilter" btn-radio="'Solo'">Solo</label>
+        </div>
+      </div>
+
+      <div class="filter">
+        <label>Filter by when ED was bought:</label><br/>
+        <div class="btn-group">
+          <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'All'">All</label>
+          <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'alpha'">Alpha</label>
+          <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'beta'">Beta</label>
+          <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'gamma'">Gamma</label>
+          <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'original release'">Orginal Release</label>
+          <label class="btn btn-primary" ng-model="ownedSinceFilter" btn-radio="'steam release'">Steam Release</label>
+        </div>
+      </div>
+
+      <div class="filter">
+        <label>Filter by faction supported:</label><br/>
+        <div class="btn-group">
+          <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'All'">All</label>
+          <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'Federation'">Federation</label>
+          <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'Empire'">Empire</label>
+          <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'Alliance'">Alliance</label>
+          <label class="btn btn-primary" ng-model="factionFilter" btn-radio="'None'">None</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

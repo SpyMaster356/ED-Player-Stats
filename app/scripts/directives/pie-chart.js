@@ -45,8 +45,7 @@
       var render = function (data) {
         var
           width = 800,
-          height = 400,
-          radius = 200,
+          radius = 100,
           color = d3.scale.category20(),
           legendRectSize = 18,
           legendSpacing = 4;
@@ -61,9 +60,9 @@
 
         var chart = svg
           .attr('width', width)
-          .attr('height', height)
+          .attr('height', d3.max([200, data.length * (legendRectSize + legendSpacing)]))
           .append('g')
-            .attr('transform', 'translate(200,200)');
+            .attr('transform', 'translate(100,100)');
 
         var arc = d3.svg.arc()
           .innerRadius(radius/4 * 3)
@@ -89,7 +88,7 @@
                   var height = legendRectSize + legendSpacing;
                   var vert = i * height;
 
-                  return 'translate(' + 460 + ',' + vert + ')';
+                  return 'translate(' + 260 + ',' + vert + ')';
                 });
 
         legend.append('text')

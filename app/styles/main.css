@@ -7,8 +7,8 @@ bar-chart,
 
 pie-chart {
   position: relative;
-  width: 800px;
-  height: 400px;
+  height: auto;
+  display: block;
 }
 
 .legend text{
@@ -17,8 +17,8 @@ pie-chart {
 
 .chart-tooltip {
   position: absolute;
-  top: -215px;
-  left: 95px;
+  top: 80px;
+  left: 35px;
 }
 
 .chart-tooltip .data-percent {
