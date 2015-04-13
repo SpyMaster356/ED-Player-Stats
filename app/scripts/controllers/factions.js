@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name comp3024Assign4App.controller:MainCtrl
+ * @name comp3024Assign4App.controller:FactionsCtrl
  * @description
- * # MainCtrl
+ * # FactionsCtrl
  * Controller of the comp3024Assign4App
  */
 angular.module('comp3024Assign4App')
-  .controller('ShipsCtrl', function ($scope, DataFactory, dataFilter, dataCounter, seriesService) {
+  .controller('FactionsCtrl', function ($scope, DataFactory, dataFilter, dataCounter, seriesService) {
     var allData;
 
     var init = function () {
@@ -42,19 +42,11 @@ angular.module('comp3024Assign4App')
       filteredData = dataFilter.filterByFaction(filteredData, $scope.factionFilter);
       filteredData = dataFilter.filterByGender(filteredData, $scope.genderFilter);
 
-      var primaryShips = dataCounter.countPrimaryShips(filteredData);
-      primaryShips = seriesService.convertToSeries(primaryShips);
-      seriesService.sortSeriesByLabel(primaryShips);
-      $scope.primaryShips = primaryShips;
-
-      var otherShips = dataCounter.countAllShips(filteredData);
-      otherShips = seriesService.convertToSeries(otherShips);
-      seriesService.sortSeriesByLabel(otherShips);
-
-      $scope.otherShips = otherShips;
+      var supportedFactions = dataCounter.countSupportedFactions(filteredData);
+      supportedFactions = seriesService.convertToSeries(supportedFactions);
+      seriesService.sortSeriesByLabel(supportedFactions);
+      $scope.supportedFactions = supportedFactions;
     };
-
-
 
     init();
   });

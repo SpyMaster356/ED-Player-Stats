@@ -88,6 +88,16 @@ angular.module('comp3024Assign4App')
         }
 
         return filteredData;
+      },
+
+      removeRole: function (data, role) {
+        var filteredData = angular.copy(data);
+
+        if(data && role !== 'All') {
+          delete filteredData[role];
+        }
+
+        return filteredData;
       }
     };
   });

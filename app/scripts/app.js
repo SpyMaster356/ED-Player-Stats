@@ -28,6 +28,10 @@ angular
         templateUrl: 'views/roles.html',
         controller: 'RolesCtrl'
       })
+      .when('/factions', {
+        templateUrl: 'views/factions.html',
+        controller: 'FactionsCtrl'
+      })
       .otherwise({
         redirectTo: '/ships'
       });
